@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 function Navigation() {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/80 border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
@@ -43,13 +43,10 @@ function Navigation() {
             <Link href="/services" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
               Services
             </Link>
-            <Link href="/academy" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
-              Academy
-            </Link>
             <Link href="/careers" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
               Careers
             </Link>
-            <Button className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-6">
+            <Button className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </nav>
@@ -68,37 +65,10 @@ function Footer() {
     <footer className="bg-slate-900 text-white">
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-2">
-              <div className="mb-6">
-                <Image
-                  src="/images/equuleus-logo.jpg"
-                  alt="Equuleus Technologies Logo"
-                  width={180}
-                  height={60}
-                  className="h-12 w-auto brightness-0 invert"
-                />
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-                Empowering businesses to transform with confidence, operate with agility, and grow with purpose through
-                innovative technology solutions.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold">Li</span>
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold">Tw</span>
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold">Ig</span>
-                </div>
-              </div>
-            </div>
-
+          <div className="grid md:grid-cols-3 gap-12">
             <div>
               <h3 className="font-semibold text-lg mb-6">Services</h3>
-              <ul className="space-y-4 text-gray-400">
+              <ul className="space-y-3 text-gray-400">
                 <li>
                   <Link href="/services" className="hover:text-white transition-colors">
                     Digital Transformation
@@ -124,15 +94,10 @@ function Footer() {
 
             <div>
               <h3 className="font-semibold text-lg mb-6">Company</h3>
-              <ul className="space-y-4 text-gray-400">
+              <ul className="space-y-3 text-gray-400">
                 <li>
                   <Link href="/about" className="hover:text-white transition-colors">
                     About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/academy" className="hover:text-white transition-colors">
-                    Academy
                   </Link>
                 </li>
                 <li>
@@ -147,30 +112,31 @@ function Footer() {
                 </li>
               </ul>
             </div>
+
+            <div>
+              <h3 className="font-semibold text-lg mb-6">Innovation</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Leading the future with cloud-first solutions and innovative technology partnerships.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="border-t border-gray-800 py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Equuleus Technologies. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+          <div className="text-center text-gray-400 text-sm">
+            <p className="mb-2">© 2026 Equuleus Technology. All rights reserved.</p>
+            <div className="flex justify-center space-x-6 mb-4">
+              <Link href="#" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="#" className="hover:text-white transition-colors">
                 Terms of Service
               </Link>
             </div>
-          </div>
-          <div className="mt-6 pt-6 border-t border-gray-800">
-            <div className="text-center text-gray-400 text-sm">
-              <p className="mb-2">📍 Plot Number A-10, Sector 34, Rohtak, Haryana, India</p>
-              <p>📞 +91 9999398103 | ✉️ info@equuleustechnologies.com</p>
-            </div>
+            <p className="mb-2">📍 Plot no. A-10, First Floor, Sector - 34, Rohtak, Haryana, India</p>
+            <p>📞 +91 9999398103 | ✉️ info@equuleustechnologies.com</p>
           </div>
         </div>
       </div>
