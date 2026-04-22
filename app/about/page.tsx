@@ -1,25 +1,23 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Target, Eye, Users, ArrowRight, CheckCircle } from "lucide-react"
+import { Target, Eye, CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="bg-orange-100 text-orange-700 mb-4">
-            About Us
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Equuleus Technologies</h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            A forward-thinking IT startup founded by seasoned professionals with over two decades of collective industry
-            experience
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-5xl lg:text-6xl font-bold mb-6">About Equuleus Technology</h1>
+          <p className="text-xl text-gray-300 max-w-3xl">
+            A forward-thinking IT company founded by seasoned professionals with over 25 years of collective industry experience.
           </p>
         </div>
+      </section>
+
+      <div className="container mx-auto px-4">
 
         {/* Company Overview */}
         <section className="mb-20">

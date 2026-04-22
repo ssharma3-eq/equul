@@ -1,7 +1,8 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, CheckCircle, Users, Zap, Globe, Award, TrendingUp, MessageSquare, Lightbulb, Cpu, Rocket, Headphones, BarChart3 } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { CheckCircle, MessageSquare, Lightbulb, Cpu, Rocket, Headphones, BarChart3, ArrowRight, Zap, Globe, Users, Award } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -9,67 +10,54 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+      <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
-                  Transform Your Business with
-                  <span className="text-orange-500 block">Digital Excellence</span>
-                </h1>
-                <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                  From digital transformation to staff augmentation, we provide end-to-end technology services that drive business growth and innovation.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8 py-4 rounded-lg"
-                >
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                Transform Your Business with
+                <span className="text-orange-500 block">Digital Excellence</span>
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
+                Empowering businesses to transform with confidence, operate with agility, and grow with purpose through innovative technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg rounded-lg font-semibold">
                   <Link href="/contact" className="flex items-center">
-                    Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+                    Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white text-lg px-8 py-4 rounded-lg"
-                >
-                  <Link href="/services">Learn More About Us</Link>
+                <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg rounded-lg font-semibold">
+                  <Link href="/services">Explore Services</Link>
                 </Button>
               </div>
-
-              {/* Stats */}
-              <div className="flex items-center gap-8 pt-8">
+              <div className="flex gap-12 pt-8">
                 <div>
                   <div className="text-3xl font-bold text-orange-500">25+</div>
-                  <div className="text-sm text-gray-400">Yrs Industry Experience</div>
+                  <p className="text-gray-400">Yrs Industry Experience</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-orange-500">10+</div>
-                  <div className="text-sm text-gray-400">Projects Delivered</div>
+                  <p className="text-gray-400">Projects Delivered</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-orange-500">4</div>
-                  <div className="text-sm text-gray-400">Happy Clients</div>
+                  <p className="text-gray-400">Happy Clients</p>
                 </div>
               </div>
             </div>
-
-            <div className="relative">
-              <div className="relative bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl p-1 shadow-2xl">
+            <div className="relative hidden lg:block">
+              <div className="relative bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg p-8 shadow-2xl">
                 <Image
                   src="/placeholder.svg?height=500&width=600"
-                  alt="Digital transformation illustration"
+                  alt="Digital transformation"
                   width={600}
                   height={500}
-                  className="rounded-2xl bg-slate-800"
+                  className="rounded-lg bg-gray-700 w-full"
                 />
               </div>
             </div>
@@ -81,7 +69,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Comprehensive Technology Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -90,70 +78,33 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="group hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-lg">
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto bg-orange-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                  <Zap className="h-8 w-8 text-orange-600 group-hover:text-white" />
-                </div>
-                <CardTitle className="text-lg">Digital Transformation</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-gray-600 text-sm">
-                  Modernize your business processes with cutting-edge digital solutions and cloud-first strategies.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-lg">
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                  <Globe className="h-8 w-8 text-blue-600 group-hover:text-white" />
-                </div>
-                <CardTitle className="text-lg">IT Managed Services</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-gray-600 text-sm">
-                  Comprehensive IT support and infrastructure management to keep your business running smoothly.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-lg">
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto bg-green-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-all">
-                  <BarChart3 className="h-8 w-8 text-green-600 group-hover:text-white" />
-                </div>
-                <CardTitle className="text-lg">Digital Marketing</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-gray-600 text-sm">
-                  Data-driven marketing strategies to enhance your online presence and drive customer engagement.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-lg">
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto bg-purple-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 group-hover:bg-purple-600 group-hover:text-white transition-all">
-                  <Users className="h-8 w-8 text-purple-600 group-hover:text-white" />
-                </div>
-                <CardTitle className="text-lg">Staff Augmentation</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-gray-600 text-sm">
-                  Scale your team with skilled professionals who integrate seamlessly with your existing workforce.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {[
+              { icon: Zap, title: "Digital Transformation", desc: "Modernize your business processes with cutting-edge digital solutions and cloud-first strategies.", color: "bg-orange-50 hover:shadow-lg" },
+              { icon: Globe, title: "IT Managed Services", desc: "Comprehensive IT support and infrastructure management to keep your business running smoothly.", color: "bg-blue-50 hover:shadow-lg" },
+              { icon: BarChart3, title: "Digital Marketing", desc: "Data-driven marketing strategies to enhance your online presence and drive customer engagement.", color: "bg-green-50 hover:shadow-lg" },
+              { icon: Users, title: "Staff Augmentation", desc: "Scale your team with skilled professionals who integrate seamlessly with your existing workforce.", color: "bg-purple-50 hover:shadow-lg" }
+            ].map((service, idx) => (
+              <Card key={idx} className={`border-0 ${service.color} transition-all duration-300`}>
+                <CardHeader className="text-center">
+                  <div className="mx-auto bg-gray-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
+                    <service.icon className="h-8 w-8 text-gray-700" />
+                  </div>
+                  <CardTitle className="text-lg">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us - Our Process */}
+      {/* Why Choose Us - Process */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Why Equuleus Technology?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -161,88 +112,64 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-4">
-            <Card className="text-center border-0 bg-white shadow-md hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="mx-auto bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
-                  <MessageSquare className="h-8 w-8 text-blue-600" />
-                </div>
-                <CardTitle className="text-base">Requirement Gathering</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">We understand your need to start the development process on the right foot.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 bg-white shadow-md hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="mx-auto bg-orange-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
-                  <Lightbulb className="h-8 w-8 text-orange-600" />
-                </div>
-                <CardTitle className="text-base">Idea Exploration</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">We shape your ideas into solutions through intensive research.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 bg-white shadow-md hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="mx-auto bg-green-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
-                  <Cpu className="h-8 w-8 text-green-600" />
-                </div>
-                <CardTitle className="text-base">Tech Check</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">We craft the best tech stack and implementation method to execute the project.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 bg-white shadow-md hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="mx-auto bg-purple-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
-                  <Rocket className="h-8 w-8 text-purple-600" />
-                </div>
-                <CardTitle className="text-base">Agile Development</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">We build the solution bit by bit with reliable results and zero hassle.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-0 bg-white shadow-md hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="mx-auto bg-red-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
-                  <Headphones className="h-8 w-8 text-red-600" />
-                </div>
-                <CardTitle className="text-base">Steady Support</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">We ensure a smooth run after launch by providing continuous support.</p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-5 gap-4 mb-16">
+            {[
+              { icon: MessageSquare, title: "Requirement Gathering", desc: "We understand your need to start the development process on the right foot.", color: "bg-blue-500" },
+              { icon: Lightbulb, title: "Idea Exploration", desc: "We shape your ideas into solutions through intensive research.", color: "bg-orange-500" },
+              { icon: Cpu, title: "Tech Check", desc: "We craft the best tech stack and implementation method to execute the project.", color: "bg-green-500" },
+              { icon: Rocket, title: "Agile Development", desc: "We build the solution bit by bit with reliable results and zero hassle.", color: "bg-purple-500" },
+              { icon: Headphones, title: "Steady Support", desc: "We ensure a smooth run after launch by providing continuous support.", color: "bg-red-500" }
+            ].map((step, idx) => (
+              <Card key={idx} className="border-0 bg-white shadow-md hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center pb-3">
+                  <div className={`mx-auto ${step.color} rounded-full p-4 w-14 h-14 flex items-center justify-center mb-3`}>
+                    <step.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <CardTitle className="text-sm font-semibold">{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-xs text-gray-600 leading-relaxed">{step.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
-          <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
               <Image
                 src="/placeholder.svg?height=400&width=500"
-                alt="Business analytics and data visualization"
+                alt="Business analytics"
                 width={500}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full"
               />
             </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
+            <div className="order-1 lg:order-2 space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-100 rounded-full p-3 mt-1 flex-shrink-0">
                   <CheckCircle className="h-6 w-6 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">99% Uptime Guarantee</h3>
-                  <p className="text-gray-600">
-                    Our infrastructure ensures maximum availability and reliability for your critical applications
-                  </p>
+                  <h3 className="text-lg font-bold mb-2">99% Uptime Guarantee</h3>
+                  <p className="text-gray-600">Our infrastructure ensures maximum availability and reliability for your critical applications and services.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-100 rounded-full p-3 mt-1 flex-shrink-0">
+                  <CheckCircle className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Expert Team</h3>
+                  <p className="text-gray-600">Our team of experienced professionals brings decades of collective expertise to every project.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-100 rounded-full p-3 mt-1 flex-shrink-0">
+                  <CheckCircle className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Proven Methodology</h3>
+                  <p className="text-gray-600">We follow industry best practices and agile methodologies to deliver exceptional results.</p>
                 </div>
               </div>
             </div>
@@ -250,27 +177,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 bg-slate-900 text-white">
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl mb-8 text-gray-300 leading-relaxed">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
               Join hundreds of companies that have accelerated their growth with our innovative technology solutions. Let's discuss how we can help you achieve your digital transformation goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8 py-4 rounded-lg">
-                <Link href="/contact" className="flex items-center">
-                  Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg rounded-lg font-semibold">
+                <Link href="/contact">Start Your Journey</Link>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-4 rounded-lg"
-              >
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg rounded-lg font-semibold">
                 <Link href="/about">Learn More About Us</Link>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="py-16 bg-gray-100 border-t border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold text-orange-600 mb-2">25+</h3>
+              <p className="text-gray-600 font-semibold">Years of Experience</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold text-orange-600 mb-2">10+</h3>
+              <p className="text-gray-600 font-semibold">Successful Projects</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold text-orange-600 mb-2">100%</h3>
+              <p className="text-gray-600 font-semibold">Client Satisfaction</p>
             </div>
           </div>
         </div>
