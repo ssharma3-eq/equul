@@ -8,9 +8,6 @@ import {
   Wrench,
   CheckCircle,
   ArrowRight,
-  Zap,
-  Shield,
-  BarChart3,
 } from "lucide-react"
 import Link from "next/link"
 
