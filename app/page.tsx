@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ArrowRight, Code2, Brain, Headphones, Wrench, CheckCircle, Shield } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ArrowRight, Code2, Brain, Headphones, Wrench, CheckCircle } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -151,7 +151,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>      </section>
+      </section>
 
       {/* Process Section */}
       <section className="py-24 px-4 bg-gray-50">
